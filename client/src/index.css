@@ -1,0 +1,41 @@
+@font-face {
+    font-family: "Gilroy600";
+    src: url("/public/fonts/Gilroy-SemiBold.woff");
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: "Gilroy700";
+    src: url("/public/fonts/Gilroy-Bold.woff");
+    font-weight: 700;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+body {
+    background: #141414;
+    color: white;
+}
+
+.container {
+    width: 1240px;
+    margin: auto;
+}
+
+@media(max-width:1300px) {
+    .container {
+        width: 1000px;
+    }
+}
+
+@media(max-width:1050px) {
+    .container {
+        width: 90%;
+    }
+}

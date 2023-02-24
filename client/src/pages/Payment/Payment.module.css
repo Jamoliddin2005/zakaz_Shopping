@@ -1,0 +1,182 @@
+.Payment h1 {
+    font-family: 'Gilroy700';
+    margin-top: 100px;
+    margin-bottom: 60px;
+    text-align: center;
+    font-weight: 700;
+    font-size: 64px;
+    color: #fff;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.cart {
+    width: 49%;
+    height: auto;
+    position: relative;
+}
+
+
+
+.Payment img {
+    width: 49%;
+    height: auto;
+    margin-bottom: 23px;
+    cursor: pointer;
+}
+
+.cart img {
+    width: 100%;
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.cart .input {
+    width: 90%;
+    height: 60px;
+    background: #141414;
+    border-radius: 10px;
+    position: absolute;
+    z-index: 2;
+    top: 85px;
+    left: 30px;
+    display: flex;
+    font-family: 'Gilroy600';
+    align-items: center;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 28px;
+    color: #999;
+    padding-left: 20px;
+}
+
+@media(max-width:1300px) {
+    .cart .input {
+        top: 70px;
+        height: 45px;
+        left: 25px;
+        font-size: 22px;
+    }
+}
+
+@media(max-width:980px) {
+    .cart .input {
+        top: 60px;
+        height: 45px;
+        left: 22px;
+        font-size: 20px;
+    }
+}
+
+@media(max-width:900px) {
+    .Payment h1 {
+        margin-top: 40px;
+        margin-bottom: 30px;
+    }
+}
+
+@media(max-width:880px) {
+    .cart .input {
+        top: 50px;
+        height: 40px;
+        left: 20px;
+        font-size: 17px;
+    }
+}
+
+@media(max-width:770px) {
+    .cart .input {
+        top: 45px;
+        height: 40px;
+        left: 15px;
+        font-size: 17px;
+    }
+}
+
+@media(max-width:700px) {
+    .cart .input {
+        top: 38px;
+        height: 38px;
+        left: 12px;
+        font-size: 15px;
+    }
+
+    .Payment img {
+        margin-bottom: 13px;
+    }
+
+    .Payment h1 {
+        font-size: 30px;
+    }
+}
+
+@media(max-width:645px) {
+    .cart .input {
+        top: 35px;
+        height: 33px;
+        left: 12px;
+        font-size: 15px;
+        padding-left: 10px;
+    }
+
+}
+
+@media(max-width:560px) {
+    .cart .input {
+        top: 32px;
+        height: 30px;
+        left: 10px;
+        font-size: 13px;
+    }
+
+}
+
+@media(max-width:480px) {
+    .cart .input {
+        top: 26px;
+        height: 26px;
+        left: 10px;
+        font-size: 13px;
+        border-radius: 5px;
+    }
+
+}
+
+@media(max-width:400px) {
+    .row {
+        flex-direction: column;
+    }
+
+    .Payment img {
+        width: 100%;
+    }
+
+    .cart {
+        width: 100%;
+    }
+
+    .cart .input {
+        top: 46px;
+        height: 40px;
+        left: 10px;
+        font-size: 13px;
+        border-radius: 5px;
+    }
+}
+
+@media(max-width:350px) {
+    .cart .input {
+        top: 40px;
+        height: 35px;
+        left: 10px;
+        font-size: 13px;
+        border-radius: 5px;
+    }
+}

@@ -1,83 +1,55 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Products from "../../components/Products/Products";
+import Loading from "../../components/Loading/Loading";
 import classes from "./Home.module.css";
 
-function Home() {
-  const products = [
-    {
-      image: "",
-      name: "Windscribe 360 GB",
-      many: 40,
-      price: 15,
-      category: "Безопасность, VPN",
-    },
-    {
-      image: "",
-      name: "SurfShark Premium",
-      many: 12,
-      price: 100,
-      category: "Безопасность, VPN",
-    },
-    {
-      image: "",
-      name: "NordVPN 2024",
-      many: 9,
-      price: 35,
-      category: "Безопасность, VPN",
-    },
-    {
-      image: "",
-      name: "TunnelBear 2025",
-      many: 31,
-      price: 30,
-      category: "Безопасность, VPN",
-    },
-  ];
+function Home({ admin }) {
+  const [products, setProducts] = useState([""]);
 
+  const GETPRODUCTS = async () => {
+    fetch(`${process.env.REACT_APP_URL}/category/`)
+      .then((res) => res.json())
+      .then((res) => setProducts(res.products))
+      .catch((err) => console.log(""));
+  };
 
+  useEffect(() => {
+    GETPRODUCTS();
+  }, []);
 
   return (
     <div className={classes.Home}>
       <div className={"container"}>
-        <div className={classes.category}>
-          <h2>Безопасность, VPN</h2>
-          <span>Категория</span>
-        </div>
-        {products.map((item, index) => (
-          <Products
-            key={index}
-            image={item.image}
-            name={item.name}
-            many={item.many}
-            price={item.price}
-          />
-        ))}
-        <div className={classes.category}>
-          <h2>Аккаунты</h2>
-          <span>Категория</span>
-        </div>
-        {products.map((item, index) => (
-          <Products
-            key={index}
-            image={item.image}
-            name={item.name}
-            many={item.many}
-            price={item.price}
-          />
-        ))}
-        <div className={classes.category}>
-          <h2>Другое</h2>
-          <span>Категория</span>
-        </div>
-        {products.map((item, index) => (
-          <Products
-            key={index}
-            image={item.image}
-            name={item.name}
-            many={item.many}
-            price={item.price}
-          />
-        ))}
+        {products && products[0].products ? (
+          products.map((item, index) => (
+            <div key={index}>
+              <div className={classes.category}>
+                <h2>{item.name}</h2>
+                {item.products && <span>Категория</span>}
+              </div>
+              {item.products ? (
+                item.products.map((item, index) => (
+                  <Products
+                    admin={admin}
+                    key={index}
+                    image={item.image}
+                    name={item.name}
+                    many={item.many}
+                    price={item.price}
+                  />
+                ))
+              ) : (
+                <div className="Loading_div">
+                  <Loading />
+                </div>
+              )}
+            </div>
+          ))
+        ) : (
+          <div className="Loading_div">
+            <Loading />
+          </div>
+        )}
       </div>
     </div>
   );

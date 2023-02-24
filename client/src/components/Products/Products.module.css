@@ -1,254 +1,262 @@
 .Products {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background: #171717;
-    border-radius: 10px;
-    width: 100%;
-    padding: 15px 25px;
-    margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #171717;
+  border-radius: 10px;
+  width: 100%;
+  padding: 15px 25px;
+  margin-bottom: 10px;
 }
 
 .Products .circle,
 .Products .left img {
-    width: 38px;
-    height: 38px;
-    background: #0047FF;
-    border-radius: 50px;
-    margin-right: 15px;
+  width: 38px;
+  height: 38px;
+  background: #0047ff;
+  border-radius: 50px;
+  margin-right: 15px;
 }
 
 .Products .left {
-    display: flex;
-    align-items: center;
-    width: 27%;
+  display: flex;
+  align-items: center;
+  width: 27%;
 }
 
 .Products .left h3 {
-    font-family: Gilroy600;
-    font-weight: 600;
-    font-size: 28px;
-    line-height: 38px;
-    color: #fff;
+  font-family: Gilroy600;
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 38px;
+  color: #fff;
 }
 
 .Products .center {
-    width: 20%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  width: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .Products .center span {
-    font-family: Gilroy600;
-    font-weight: 600;
-    font-size: 20px;
-    line-height: 24px;
-    color: #9A9A9A;
+  font-family: Gilroy600;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  color: #9a9a9a;
 }
 
 .Products .right button {
-    background: #202020;
-    border-radius: 5px;
-    padding: 10px 20px;
-    display: flex;
-    align-items: center;
-    border: none;
-    cursor: pointer;
-    width: 155px;
-    height: 50px;
-    justify-content: center;
-    color: #fff;
-    transition: .3s;
+  background: #202020;
+  border-radius: 5px;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  border: none;
+  cursor: pointer;
+  width: 155px;
+  height: 50px;
+  justify-content: center;
+  color: #fff;
+  transition: 0.3s;
 }
 
 .Products .right button span {
-    font-family: Gilroy600;
-    margin-left: 10px;
-    font-weight: 600;
-    font-size: 24px;
-    line-height: 29px;
+  font-family: Gilroy600;
+  margin-left: 10px;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 29px;
 }
 
 .Products .right button:hover {
-    background: #0047FF;
+  background: #0047ff;
 }
 
+@media (max-width: 1300px) {
+  .Products .circle,
+  .Products .left img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50px;
+  }
 
-@media(max-width:1300px) {
+  .Products .left h3 {
+    font-size: 20px;
+    line-height: normal;
+  }
 
-    .Products .circle,
-    .Products .left img {
-        width: 30px;
-        height: 30px;
-        border-radius: 50px;
-    }
+  .Products {
+    padding: 10px 20px;
+  }
 
-    .Products .left h3 {
-        font-size: 20px;
-        line-height: normal;
-    }
+  .Products .center span {
+    font-size: 15px;
+    line-height: normal;
+  }
 
-    .Products {
-        padding: 10px 20px;
-    }
+  .Products .right button {
+    padding: 8px 18px;
+    width: 140px;
+  }
 
-    .Products .center span {
-        font-size: 15px;
-        line-height: normal;
-    }
-
-    .Products .right button {
-        padding: 8px 18px;
-        width: 140px;
-    }
-
-
-    .Products .right button span {
-        font-size: 18px;
-    }
+  .Products .right button span {
+    font-size: 18px;
+  }
 }
 
+@media (max-width: 1050px) {
+  .Products .circle,
+  .Products .left img {
+    width: 24px;
+    height: 24px;
+  }
 
-@media(max-width:1050px) {
+  .Products .left h3 {
+    font-size: 15px;
+  }
 
-    .Products .circle,
-    .Products .left img {
-        width: 24px;
-        height: 24px;
-    }
+  .Products {
+    padding: 5px 20px;
+  }
 
-    .Products .left h3 {
-        font-size: 15px;
-    }
+  .Products .center span {
+    font-size: 13px;
+    line-height: normal;
+  }
 
-    .Products {
-        padding: 5px 20px;
-    }
+  .Products .right button {
+    padding: 8px 18px;
+    height: 40px;
+    width: 120px;
+  }
 
-    .Products .center span {
-        font-size: 13px;
-        line-height: normal;
-    }
+  .Products .right button img {
+    width: 30%;
+    height: auto;
+  }
 
-    .Products .right button {
-        padding: 8px 18px;
-        height: 40px;
-        width: 120px;
-    }
-
-    .Products .right button img {
-        width: 30%;
-        height: auto;
-    }
-
-    .Products .right button span {
-        font-size: 12px;
-        line-height: normal;
-    }
+  .Products .right button span {
+    font-size: 12px;
+    line-height: normal;
+  }
 }
 
+@media (max-width: 760px) {
+  .Products .circle,
+  .Products .left img {
+    width: 20px;
+    height: 20px;
+  }
 
-@media(max-width:760px) {
+  .Products .left h3 {
+    font-size: 12px;
+  }
 
-    .Products .circle,
-    .Products .left img {
-        width: 20px;
-        height: 20px;
-    }
+  .Products {
+    padding: 5px 20px;
+  }
 
-    .Products .left h3 {
-        font-size: 12px;
-    }
+  .Products .center span {
+    font-size: 11px;
+    line-height: normal;
+  }
 
-    .Products {
-        padding: 5px 20px;
-    }
+  .Products .right button {
+    padding: 6px 15px;
+    height: 35px;
+    width: 120px;
+  }
 
-    .Products .center span {
-        font-size: 11px;
-        line-height: normal;
-    }
+  .Products .right button img {
+    width: 30%;
+    height: auto;
+  }
 
-    .Products .right button {
-        padding: 6px 15px;
-        height: 35px;
-        width: 120px;
-    }
-
-    .Products .right button img {
-        width: 30%;
-        height: auto;
-    }
-
-    .Products .right button span {
-        font-size: 12px;
-        line-height: normal;
-    }
+  .Products .right button span {
+    font-size: 12px;
+    line-height: normal;
+  }
 }
 
-@media(max-width:625px) {
-    .Products .left {
-        width: 30%;
-    }
+@media (max-width: 625px) {
+  .Products .left {
+    width: 30%;
+  }
 }
 
-@media(max-width:566px) {
-    .Products .left {
-        width: 40%;
-    }
+@media (max-width: 566px) {
+  .Products .left {
+    width: 40%;
+  }
 }
 
-@media(max-width:510px) {
-    .Products .left {
-        width: 43%;
-    }
+@media (max-width: 510px) {
+  .Products .left {
+    width: 43%;
+  }
 
-    .Products .left h3 {
-        font-size: 12px;
-    }
+  .Products .left h3 {
+    font-size: 12px;
+  }
 
-    .Products .center {
-        width: 25%;
-    }
+  .Products .center {
+    width: 25%;
+  }
 
-    .Products .right button {
-        padding: 8px 10px;
-        width: auto;
-    }
+  .Products .right button {
+    padding: 8px 10px;
+    width: auto;
+  }
 }
 
-@media(max-width:440px) {
-    .Products .left {
-        width: 41%;
-    }
+@media (max-width: 440px) {
+  .Products .left {
+    width: 41%;
+  }
 
-    .Products {
-        padding: 5px 10px;
-    }
+  .Products {
+    padding: 5px 10px;
+  }
 
-    .Products .circle,
-    .Products .left img {
-        border-radius: 50px;
-        margin-right: 5px;
-    }
+  .Products .circle,
+  .Products .left img {
+    border-radius: 50px;
+    margin-right: 5px;
+  }
 
-    .Products .center {
-        width: 25%;
-    }
+  .Products .center {
+    width: 25%;
+  }
 
-    .Products .right button {
-        padding: 8px 10px;
-        width: auto;
-    }
+  .Products .right button {
+    padding: 8px 10px;
+    width: auto;
+  }
 }
 
-@media(max-width:380px) {
-    .Products .left h3 {
-        font-size: 12px;
-    }
+@media (max-width: 380px) {
+  .Products .left h3 {
+    font-size: 12px;
+  }
 
-    .Products .center {
-        flex-direction: column;
-    }
+  .Products .center {
+    flex-direction: column;
+  }
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+}
+
+.right .buttons button {
+  width: auto;
+  padding: 0 20px;
+  margin-left: 10px;
+}
+.right .buttons button svg {
+  width: 20px;
+  fill: #fff;
 }
